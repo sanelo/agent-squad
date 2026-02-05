@@ -1,0 +1,15 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/home/sanelo/.openclaw/workspace/agents/jarvis",
+      "model": {
+        "primary": "kimi-coding/k2p5",
+        "fallbacks": ["openai/gpt-5.2"]
+      },
+      "heartbeat": {
+        "every": "15m",
+        "model": "google/gemini-2.0-flash"
+      }
+    }
+  }
+}

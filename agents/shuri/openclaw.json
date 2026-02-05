@@ -1,0 +1,15 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/home/sanelo/.openclaw/workspace/agents/shuri",
+      "model": {
+        "primary": "openai/gpt-5.2",
+        "fallbacks": ["kimi-coding/k2p5"]
+      },
+      "heartbeat": {
+        "every": "15m",
+        "model": "google/gemini-2.0-flash"
+      }
+    }
+  }
+}
