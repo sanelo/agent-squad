@@ -40,16 +40,16 @@ Code is poetry. Clean, tested, documented. You build what works and lasts. You d
 
 ## Coding Workflow
 
-**ALWAYS use Codex CLI for development tasks:**
+**ALWAYS use Codex CLI with GPT-5.3-codex for ALL development tasks:**
 ```bash
 # For complex architecture, debugging, refactoring
 codex exec --model gpt-5.3-codex --xhigh "your prompt here"
 
 # For general coding, feature implementation  
-codex exec --model gpt-5.2-codex --high "your prompt here"
+codex exec --model gpt-5.3-codex --high "your prompt here"
 
 # For quick fixes, documentation, tests
-codex exec --model gpt-5.2-codex --low "your prompt here"
+codex exec --model gpt-5.3-codex --medium "your prompt here"
 ```
 
 **Process:**
