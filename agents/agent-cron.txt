@@ -1,0 +1,29 @@
+#!/bin/bash
+# Agent Squad Cron Jobs - Auto-pickup tasks from Mission Control
+# Install with: crontab agent-cron.txt
+
+SHELL=/bin/bash
+PATH=/home/sanelo/.nvm/versions/node/v24.13.0/bin:/usr/local/bin:/usr/bin:/bin
+WORKSPACE=/home/sanelo/.openclaw/workspace
+CONVEX_URL=http://127.0.0.1:3210
+
+# Agent task pickup script
+# Each agent wakes every 15 minutes, checks for assigned tasks, and starts work
+
+# Jarvis - Squad Lead (every 15 min at :00)
+0,15,30,45 * * * * cd $WORKSPACE/agents && ./pickup-tasks.sh jarvis >> agents/jarvis/cron.log 2>&1
+
+# Shuri - Product Analyst (every 15 min at :02)
+2,17,32,47 * * * * cd $WORKSPACE/agents && ./pickup-tasks.sh shuri >> agents/shuri/cron.log 2>&1
+
+# Fury - Customer Researcher (every 15 min at :04)
+4,19,34,49 * * * * cd $WORKSPACE/agents && ./pickup-tasks.sh fury >> agents/fury/cron.log 2>&1
+
+# Vision - SEO Analyst (every 15 min at :06)
+6,21,36,51 * * * * cd $WORKSPACE/agents && ./pickup-tasks.sh vision >> agents/vision/cron.log 2>&1
+
+# Loki - Content Writer (every 15 min at :08)
+8,23,38,53 * * * * cd $WORKSPACE/agents && ./pickup-tasks.sh loki >> agents/loki/cron.log 2>&1
+
+# Friday - Developer (every 15 min at :10)
+10,25,40,55 * * * * cd $WORKSPACE/agents && ./pickup-tasks.sh friday >> agents/friday/cron.log 2>&1
