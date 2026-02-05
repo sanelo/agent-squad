@@ -1,0 +1,31 @@
+# Agent Cron Schedule
+# Based on pbteja1998's Mission Control article
+# Staggered heartbeats every 15 minutes to avoid API rate limits
+
+# Install with: crontab cron-schedule.txt
+
+SHELL=/bin/bash
+PATH=/home/sanelo/.nvm/versions/node/v24.13.0/bin:/usr/local/bin:/usr/bin:/bin
+WORKSPACE=/home/sanelo/.openclaw/workspace
+CONVEX_URL=http://127.0.0.1:3210
+
+# Jarvis - Squad Lead (every 15 min at :00)
+0,15,30,45 * * * * cd $WORKSPACE && openclaw sessions:send agent:main:main "Check Mission Control for tasks and updates. Report status." >> agents/jarvis/cron.log 2>&1
+
+# Shuri - Product Analyst (every 15 min at :02)
+2,17,32,47 * * * * cd $WORKSPACE && openclaw sessions:send agent:product-analyst:main "Check for testing tasks and product analysis work. Report HEARTBEAT_OK if nothing." >> agents/shuri/cron.log 2>&1
+
+# Fury - Customer Researcher (every 15 min at :04)
+4,19,34,49 * * * * cd $WORKSPACE && openclaw sessions:send agent:customer-researcher:main "Check for research tasks. Look for competitor updates. Report HEARTBEAT_OK if nothing." >> agents/fury/cron.log 2>&1
+
+# Vision - SEO Analyst (every 15 min at :06)
+6,21,36,51 * * * * cd $WORKSPACE && openclaw sessions:send agent:seo-analyst:main "Check for SEO tasks. Monitor keyword rankings. Report HEARTBEAT_OK if nothing." >> agents/vision/cron.log 2>&1
+
+# Loki - Content Writer (every 15 min at :08)
+8,23,38,53 * * * * cd $WORKSPACE && openclaw sessions:send agent:content-writer:main "Check for writing tasks. Review drafts needing edits. Report HEARTBEAT_OK if nothing." >> agents/loki/cron.log 2>&1
+
+# Friday - Developer (every 15 min at :10)
+10,25,40,55 * * * * cd $WORKSPACE && openclaw sessions:send agent:developer:main "Check for dev tasks. Review PRs. Report HEARTBEAT_OK if nothing." >> agents/friday/cron.log 2>&1
+
+# Daily standup generation (11:30 PM EST)
+30 23 * * * cd $WORKSPACE && openclaw sessions:send agent:main:main "Generate daily standup report from Mission Control activity." >> agents/jarvis/standup.log 2>&1

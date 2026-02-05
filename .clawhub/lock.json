@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "skills": {
+    "finance": {
+      "version": "1.1.2",
+      "installedAt": 1770259852941
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "installedAt": 1770259862348
+    },
+    "nextjs-expert": {
+      "version": "1.0.0",
+      "installedAt": 1770259864482
+    },
+    "deploy-agent": {
+      "version": "1.1.0",
+      "installedAt": 1770259866655
+    },
+    "webapp-testing": {
+      "version": "0.1.0",
+      "installedAt": 1770259869403
+    },
+    "browser-cash": {
+      "version": "1.0.0",
+      "installedAt": 1770259871858
+    },
+    "smtp-send": {
+      "version": "1.0.0",
+      "installedAt": 1770259874356
+    },
+    "github-pr": {
+      "version": "1.0.0",
+      "installedAt": 1770259880601
+    },
+    "git-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1770259882722
+    },
+    "ui-audit": {
+      "version": "1.0.1",
+      "installedAt": 1770259886090
+    },
+    "docker-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1770259890152
+    },
+    "backend-patterns": {
+      "version": "0.1.2",
+      "installedAt": 1770259897589
+    },
+    "debug-pro": {
+      "version": "1.0.0",
+      "installedAt": 1770259899816
+    },
+    "codex-quota": {
+      "version": "1.1.0",
+      "installedAt": 1770260433858
+    },
+    "codex-orchestration": {
+      "version": "2.0.0",
+      "installedAt": 1770260435945
+    },
+    "senior-architect": {
+      "version": "0.1.0",
+      "installedAt": 1770260440216
+    },
+    "bird": {
+      "version": "1.0.0",
+      "installedAt": 1770260443618
+    },
+    "gemini": {
+      "version": "1.0.0",
+      "installedAt": 1770260447371
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1770260450189
+    }
+  }
+}
